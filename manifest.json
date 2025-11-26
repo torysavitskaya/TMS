@@ -1,0 +1,65 @@
+{
+  "manifest_version": 3,
+  "name": "__MSG_extName__",
+  "description": "__MSG_extDesc__",
+  "version": "3.2.0",
+  "default_locale": "ru",
+  "minimum_chrome_version": "88",
+  
+  "icons": {
+    "16": "assets/icons/icon_16.png",
+    "48": "assets/icons/icon_48.png",
+    "128": "assets/icons/icon_128.png"
+  },
+
+  "action": {
+    "default_title": "Torrents MultiSearch",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "19": "assets/icons/icon_19.png",
+      "38": "assets/icons/icon_38.png"
+    }
+  },
+
+  "background": {
+    "service_worker": "sw.js"
+  },
+
+  "options_page": "index.html#/options",
+  
+  "omnibox": {
+    "keyword": "tms"
+  },
+
+  "permissions": [
+    "storage",
+    "contextMenus",
+    "unlimitedStorage"
+  ],
+  
+  "optional_permissions": [
+    "tabs"
+  ],
+
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+
+  "sandbox": {
+    "pages": [
+      "sandbox.html"
+    ]
+  },
+
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'; style-src 'self' 'unsafe-inline';"
+  },
+
+  "web_accessible_resources": [
+    {
+      "resources": ["tabFetch.js", "assets/*"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

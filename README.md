@@ -1,4 +1,4 @@
-**Torrents MultiSearch (Unofficial MV3 Port)**
+**TMS (Torrents MultiSearch – Unofficial MV3 Port)**
 
 Неофициальная адаптация расширения Torrents MultiSearch под стандарт **Manifest V3**.
 
